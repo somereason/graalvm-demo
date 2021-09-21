@@ -22,12 +22,12 @@ public class HomeController {
         return "Hello world, request count: " + count.addAndGet(1);
     }
 
-    @GetMapping("/random_task")
+    @GetMapping("/random_car")
     @ResponseBody
-    private CarEntity randomTask() {
+    private CarEntity randomCar() {
         long count = carRepository.count();
         Random r = new Random();
-        Optional<CarEntity> task = carRepository.findById(r.nextInt((int) count));
-        return task.orElse(CarEntity.nullObject());
+        Optional<CarEntity> car = carRepository.findById(r.nextInt((int) count));
+        return car.orElse(CarEntity.nullObject());
     }
 }
