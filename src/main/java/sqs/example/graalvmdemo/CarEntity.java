@@ -16,12 +16,12 @@ public class CarEntity {
 
     private String plate;
 
-    private String desc;
+    private String content;
 
     public static CarEntity nullObject() {
         CarEntity nullObj = new CarEntity();
         nullObj.plate = "EMPTY";
-        nullObj.desc = "";
+        nullObj.content = "";
         return nullObj;
     }
 }

@@ -24,6 +24,30 @@ run
 
 > target/graalvm-demo
 
+## init sql
+
+
+```sql
+create database test;
+
+use test;
+
+create table test.car
+(
+id int auto_increment
+primary key,
+plate varchar(20) null,
+content json null
+);
+
+INSERT INTO test.car (plate, content) VALUES ('613138712310', '{"model":"BMW 750i"}');
+INSERT INTO test.car (plate, content) VALUES ('570419857871', '{"model":"BMW 750i"}');
+INSERT INTO test.car (plate, content) VALUES ('976078589320', '{"model":"BMW 750i"}');
+INSERT INTO test.car (plate, content) VALUES ('857980252855', '{"model":"BMW 750i"}');
+INSERT INTO test.car (plate, content) VALUES ('420925232621', '{"model":"BMW 750i"}');
+```
+
+
 ## TODO
 
 * use freemarker
