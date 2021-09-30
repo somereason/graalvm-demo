@@ -16,6 +16,15 @@ curl http://localhost:9001/random_car
 curl http://localhost:9001/indexjson
 ```
 
+then remove following content in reflect-config.json
+
+```json
+{
+  "name":"org.springframework.boot.logging.log4j2.Log4J2LoggingSystem$Factory",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+}
+```
+
 package
 
 > mvn clean package -Dmaven.test.skip=true
